@@ -35,6 +35,14 @@ h1 {
   line-height: 1.1;
 }
 
+.heart {
+  position: absolute;
+  top: 5%;
+  left: 75%;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
 .button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -51,6 +59,11 @@ h1 {
   max-height: 5rem;
   min-height: 5rem;
   word-wrap: break-word;
+
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
 }
 .button:hover {
   border-color: #646cff;

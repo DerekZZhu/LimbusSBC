@@ -4,8 +4,7 @@ import Button from "./Button"
 import './App.css'
 
 function App() {
-
-  const audioUrl = "https://github.com/DerekZZhu/Assets/raw/main/PM_SOP_ASSETS/audio1.mp3"; // Replace with your GitHub raw URL
+  const flavors = ["PEACH VORRIBURR", "Limbus Company", "AUUUghh!!"]
 
   return (
     <>
