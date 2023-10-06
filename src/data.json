@@ -23,5 +23,70 @@
         "id":4,
         "audio":"https://github.com/DerekZZhu/Assets/raw/main/LimbusSB/kromer_whistle2.wav",
         "name":"Kromer Whistle 2"
+    },
+    {
+        "id":5,
+        "audio":"https://github.com/DerekZZhu/Assets/raw/main/LimbusSB/faust1.wav",
+        "name":"Faust 1"
+    },
+    {
+        "id":6,
+        "audio":"https://github.com/DerekZZhu/Assets/raw/main/LimbusSB/faust2.wav",
+        "name":"Faust 2"
+    },
+    {
+        "id":7,
+        "audio":"https://github.com/DerekZZhu/Assets/raw/main/LimbusSB/faust3.wav",
+        "name":"Faust 3"
+    },
+    {
+        "id":8,
+        "audio":"https://github.com/DerekZZhu/Assets/raw/main/LimbusSB/faust4.wav",
+        "name":"Faust 4"
+    },
+    {
+        "id":9,
+        "audio":"https://github.com/DerekZZhu/Assets/raw/main/LimbusSB/gregor1.wav",
+        "name":"Gregor 1"
+    },
+    {
+        "id":10,
+        "audio":"https://github.com/DerekZZhu/Assets/raw/main/LimbusSB/gregor2.wav",
+        "name":"Gregor 2"
+    },
+    {
+        "id":11,
+        "audio":"https://github.com/DerekZZhu/Assets/raw/main/LimbusSB/gregor3.wav",
+        "name":"Gregor 3"
+    },
+    {
+        "id":12,
+        "audio":"https://github.com/DerekZZhu/Assets/raw/main/LimbusSB/gregor4.wav",
+        "name":"Gregor 4"
+    },
+    {
+        "id":13,
+        "audio":"https://github.com/DerekZZhu/Assets/raw/main/LimbusSB/gregor_cheer1.wav",
+        "name":"Gregor Cheer 1"
+    },
+    {
+        "id":14,
+        "audio":"https://github.com/DerekZZhu/Assets/raw/main/LimbusSB/gregor_cheer2.wav",
+        "name":"Gregor Cheer 2"
+    },
+    {
+        "id":15,
+        "audio":"https://github.com/DerekZZhu/Assets/raw/main/LimbusSB/bus_rattle.wav",
+        "name":"Bus Rattle"
+    },
+    {
+        "id":16,
+        "audio":"https://github.com/DerekZZhu/Assets/raw/main/LimbusSB/scream.wav",
+        "name":"Scream"    
+    },
+    {
+        "id":17,
+        "audio":"https://github.com/DerekZZhu/Assets/raw/main/LimbusSB/beach_volleyball.wav",
+        "name":"BEACH VOLLEYBALL" 
     }
 ]

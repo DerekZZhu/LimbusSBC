@@ -53,11 +53,13 @@ h1 {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
-  max-width: 7rem;
-  min-width: 7rem;
+  max-width: 8rem;
+  min-width: 8rem;
 
-  max-height: 7rem;
-  min-height: 7rem;
+  max-height: 8rem;
+  min-height: 8rem;
+
+  width: 20%;
   word-wrap: break-word;
 
   display: flex;
@@ -73,13 +75,6 @@ h1 {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-.liked-section {
-  display: flex;
-  flex-direction: row;
-  /* justify-content: space-between; */
-  padding: 2rem;
-}
-
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -93,9 +88,32 @@ h1 {
   }
 }
 
-.container {
+.soundboard {
+  width: 70rem;
+  /* height: 70rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.liked-section {
   width: 70rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  padding: 2rem 0rem;
+  gap: 2rem
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+

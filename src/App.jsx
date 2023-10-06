@@ -29,43 +29,43 @@ function App() {
         updateLikedSounds({...liked})
       }
     } else {
-      var hit = {}
+      var deleted = {}
       Object.entries(liked).forEach((data) => {
         if (data[0] != id+"") {
-          hit[data[0]] = data[1]
+          deleted[data[0]] = data[1]
         }
       })
-      console.log("hit", hit)
-      updateLikedSounds({...hit})
+      updateLikedSounds({...deleted})
     }
   }
-
 
   return (
     <>
       <h1>L Soundboard</h1>
       <h2>PEACH VORRIBURR, anytime, anywhere</h2>
-      <div className="liked-section">
-        {
-          (Object.values(likedSounds)).map((data, i) => {
-            return(<Button key={i} sound={data.audio} name={data.name}/>)
-          })
-        }
-      </div>
       <div className="container">
-        {
-          data.map((data, i) => {
-            const color = likedSounds.hasOwnProperty(data.id+"")?"#ff6b81":"#a4b0be"
-            return(<Button 
-                      key={i} 
-                      kkey={i} 
-                      sound={data.audio} 
-                      name={data.name} 
-                      handleLike={handleLike} 
-                      color={color}
-                    />)
-          })
-        }
+        <div className="liked-section">
+          {
+            (Object.values(likedSounds)).map((data, i) => {
+              return(<Button key={i} sound={data.audio} name={data.name}/>)
+            })
+          }
+        </div>
+        <div className="soundboard">
+          {
+            data.map((data, i) => {
+              const color = likedSounds.hasOwnProperty(data.id+"")?"#ff6b81":"#a4b0be"
+              return(<Button 
+                        key={i} 
+                        kkey={i} 
+                        sound={data.audio} 
+                        name={data.name} 
+                        handleLike={handleLike} 
+                        color={color}
+                      />)
+            })
+          }
+        </div>
       </div>
     </>
     
