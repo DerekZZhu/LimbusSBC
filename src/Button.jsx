@@ -10,6 +10,9 @@ const Button = (props) => {
   }
 
   function handleClick() {
+    if (liked === false) {
+      props.handleLike(true, props.kkey)
+    } 
     updateLiked(!liked)
   }
 
@@ -21,4 +24,19 @@ const Button = (props) => {
   );
 };
 
+
+function ButtonLiked(props){
+  function play() {
+    const audio = new Audio(props.sound);
+    audio.play();
+  }
+
+  return (
+    <div className="button" onClick={play}>
+      {props.name}
+    </div>
+  )
+}
+
 export default Button;
+export { ButtonLiked };
