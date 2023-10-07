@@ -25,7 +25,7 @@ function App() {
 
     if (like) {
       liked[id] = data[id]
-      if (useState.length < 10) {
+      if (likedSounds.length < 10) {
         updateLikedSounds({...liked})
       }
     } else {
