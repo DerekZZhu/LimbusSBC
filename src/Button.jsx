@@ -20,10 +20,13 @@ const Button = (props) => {
   }
 
   return (
-    <div className="button" onClick={play}>
+    <div className="button">
+      <div className="button-mask"onClick={play}>
+        {props.name}
+      </div>
       <FaHeart style={{color:liked?"#ff6b81":"#a4b0be"}} onClick={handleClick} className="heart"/>
-      {props.name}
     </div>
+
   );
 };
 
