@@ -11,8 +11,10 @@ function App() {
 
   useEffect(() => {
     const items = JSON.parse(localStorage.getItem('likedsounds'));
-    if (items) {
-      updateLikedSounds(items);
+    const count = JSON.parse(localStorage.getItem('likedCount'));
+    if (items && count) {
+      updateLikedSounds(items)
+      updateLikedCount(count)
     }
   }, []);
 
@@ -52,13 +54,15 @@ function App() {
       <h1>L Soundboard</h1>
       <h2>PEACH VORRIBURR, anytime, anywhere</h2>
       <div className="container">
-        <div className="liked-section">
-          {likedCount}
+        <h3>{likedCount}/10</h3>
+        <div className="liked-section-wrapper">
+          <div className="liked-section">
           {
             (Object.values(likedSounds)).map((data, i) => {
               return(<Button key={i} sound={data.audio} name={data.name}/>)
             })
           }
+          </div>
         </div>
         <div className="soundboard">
           {

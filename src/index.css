@@ -118,6 +118,12 @@ h1 {
   gap: 2rem
 }
 
+.liked-section-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .container {
   display: flex;
   flex-direction: column;

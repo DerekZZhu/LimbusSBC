@@ -3,6 +3,7 @@ import { FaHeart } from 'react-icons/fa';
 
 const Button = (props) => {
   var isLiked = props.liked
+  console.log(isLiked);
   const [liked, updateLiked] = useState(isLiked)
 
   function play() {
