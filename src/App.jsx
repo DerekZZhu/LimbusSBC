@@ -20,8 +20,16 @@ function App() {
     localStorage.setItem('likedsounds', JSON.stringify(likedSounds));
   }, [likedSounds]);
 
+  useEffect(() => {
+    localStorage.setItem('likedCount', JSON.stringify(likedCount))
+  }, [likedCount])
+
   function handleLike(like, id) {
     var liked = likedSounds
+
+    if (likedCount > 9 && like===true) {
+      return
+    }
 
     if (like) {
       liked[id] = data[id]
@@ -55,14 +63,15 @@ function App() {
         <div className="soundboard">
           {
             data.map((data, i) => {
-              const color = likedSounds.hasOwnProperty(data.id+"")?"#ff6b81":"#a4b0be"
+              // const color = ?"#ff6b81":"#a4b0be"
               return(<Button 
                         key={i} 
-                        kkey={i} 
+                        id={i} 
+                        total={likedCount}
                         sound={data.audio} 
                         name={data.name} 
                         handleLike={handleLike} 
-                        color={color}
+                        liked={likedSounds.hasOwnProperty(data.id+"")}
                       />)
             })
           }
