@@ -23,26 +23,19 @@ function App() {
   function handleLike(like, id) {
     var liked = likedSounds
 
-    if (like && likedCount > 10) {
-      console.log("NO MORE");
-      return
-    }
-
     if (like) {
       liked[id] = data[id]
       updateLikedCount(likedCount+1)
       if (likedCount < 10) {
         updateLikedSounds({...liked})
+      } else {
+        return
       }
     } else {
-      var deleted = {}
+      const remainingLikedSounds = {...likedSounds};  // instead of `deleted`
+      delete remainingLikedSounds[id];
+      updateLikedSounds(remainingLikedSounds);
       updateLikedCount(likedCount-1)
-      Object.entries(liked).forEach((data) => {
-        if (data[0] != id+"") {
-          deleted[data[0]] = data[1]
-        }
-      })
-      updateLikedSounds({...deleted})
     }
   }
 
