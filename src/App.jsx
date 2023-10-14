@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useLayoutEffect } from 'react'
 import data from "./data.json"
 import Button from "./Button"
 import './App.css'
@@ -9,7 +9,7 @@ function App() {
   const [likedSounds, updateLikedSounds] = useState({})
   const [likedCount, updateLikedCount] = useState(0)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const items = JSON.parse(localStorage.getItem('likedsounds'));
     const count = JSON.parse(localStorage.getItem('likedCount'));
     if (items && count) {
