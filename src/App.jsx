@@ -14,6 +14,7 @@ function App() {
     const count = JSON.parse(localStorage.getItem('likedCount'));
     if (items && count) {
       updateLikedSounds(items)
+      // console.log(likedSounds);
       updateLikedCount(count)
     }
   }, []);
