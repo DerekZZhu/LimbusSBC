@@ -124,6 +124,11 @@ h1 {
   align-items: center;
 }
 
+.liked-section > .button > .heart {
+  display: none;
+  
+}
+
 .container {
   display: flex;
   flex-direction: column;

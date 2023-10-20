@@ -31,12 +31,7 @@ function App() {
     var liked = likedSounds
     console.log(like)
 
-    if (likedCount > 9 && like === false) {
-      console.log("Cannot Handle Like");
-      const remainingLikedSounds = {...likedSounds};  // instead of `deleted`
-      delete remainingLikedSounds[id];
-      updateLikedSounds(remainingLikedSounds);
-      updateLikedCount(likedCount-1)
+    if (likedCount > 9 && like === true) {
       return
     }
 
