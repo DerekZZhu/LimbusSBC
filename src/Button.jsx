@@ -2,9 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FaHeart } from 'react-icons/fa';
 
 const Button = (props) => {
-  var isLiked = props.liked
-  console.log(isLiked);
-  const [liked, updateLiked] = useState(isLiked)
+  const [liked, updateLiked] = useState(false)
 
   useEffect(() => {
     const checkLiked = localStorage.getItem('likedsounds');
@@ -18,25 +16,27 @@ const Button = (props) => {
   }, [])
   const color = liked?"#ff6b81":"#a4b0be"
 
-
-
   function play() {
     const audio = new Audio(props.sound);
     audio.play();
   }
 
   function handleClick() {
-    if (props.total > 9) {
+    if (props.total > 9 && liked) {
+      console.log("Cannot Handle This");
+      console.log(liked);
+      props.handleLike(!liked, props.id)
+      updateLiked(!liked)
       return 
     }
-    // console.log(liked)
+    console.log(liked)
     props.handleLike(!liked, props.id)
     updateLiked(!liked)
   }
 
   return (
     <div className="button">
-      <div className="button-mask"onClick={play}>
+      <div className="button-mask" onClick={play}>
         {props.name}
       </div>
       <FaHeart style={{color:color}} onClick={handleClick} className="heart"/>
