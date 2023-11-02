@@ -56,8 +56,8 @@ function App() {
       <h1>L Soundboard</h1>
       <h2>PEACH VORRIBURR, anytime, anywhere</h2>
       <div className="container">
-        <h3>{likedCount}/10</h3>
         <div className="liked-section-wrapper">
+          <h3 className="count">{likedCount}/10 Liked Sounds</h3>
           <div className="liked-section">
           {
             (Object.values(likedSounds)).map((data, i) => {
