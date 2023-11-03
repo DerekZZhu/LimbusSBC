@@ -51,13 +51,21 @@ function App() {
     }
   }
 
+  function clear() {
+    updateLikedCount(0)
+    updateLikedSounds({})
+  }
+
   return (
     <>
       <h1>L Soundboard</h1>
       <h2>PEACH VORRIBURR, anytime, anywhere</h2>
       <div className="container">
         <div className="liked-section-wrapper">
-          <h3 className="count">{likedCount}/10 Liked Sounds</h3>
+          <div className="c-container">
+            <h3 className="count">{likedCount}/10 Liked Sounds</h3>
+            <h3 className="clear" onClick={clear}>Clear</h3>
+          </div>
           <div className="liked-section">
           {
             (Object.values(likedSounds)).map((data, i) => {

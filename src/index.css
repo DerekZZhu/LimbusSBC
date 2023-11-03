@@ -35,6 +35,10 @@ h1 {
   line-height: 1.1;
 }
 
+h3 {
+  display: inline-block;
+}
+
 .heart {
   position: absolute;
   top: 5%;
@@ -141,7 +145,19 @@ h1 {
   justify-content: center;
 }
 
+.c-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
 .count {
   align-self:flex-start;
   text-align: left;
+}
+
+.clear {
+  margin-left: auto;
+  /* align-self: flex-end;
+  text-align: right; */
 }

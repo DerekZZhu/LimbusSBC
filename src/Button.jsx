@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FaHeart } from 'react-icons/fa';
 
 const Button = (props) => {
-  const [liked, updateLiked] = useState(false)
+  const [liked, updateLiked] = useState(props.liked)
 
   useEffect(() => {
     const checkLiked = localStorage.getItem('likedsounds');
@@ -14,6 +14,11 @@ const Button = (props) => {
       updateLiked(true)
     }
   }, [])
+
+  useEffect(() => {
+    updateLiked(props.liked);
+  }, [props.liked]);
+
   const color = liked?"#ff6b81":"#a4b0be"
 
   function play() {
