@@ -1,7 +1,9 @@
 import { useState, useEffect, useLayoutEffect } from 'react'
+import { FaGithub, FaInstagram, FaYoutube} from 'react-icons/fa';
 import data from "./data.json"
 import Button from "./Button"
 import './App.css'
+
 
 function App() {
   const flavors = ["PEACH VORRIBURR", "Limbus Company", "AUUUghh!!"]
@@ -91,8 +93,16 @@ function App() {
           }
         </div>
       </div>
+      <div className='footer'>
+          <p>All rights for audio go to Project Moon and Limbus Company. Go <a href="https://limbuscompany.com/">check them out!</a></p>
+          <p>Hi im Derek. I love PM. Follow me on insta, star a repo on my github, or stress test my site :)</p>
+          <div className="links">
+            <FaGithub onClick={()=> window.open("https://github.com/DerekZZhu", "_blank")}/>
+            <FaInstagram onClick={()=> window.open("https://www.instagram.com/derek_zzzhu/", "_blank")}/>
+            <FaYoutube onClick={()=> window.open("https://www.youtube.com/@Rek505", "_blank")}/>
+          </div>
+      </div>
     </>
-    
   )
 }
 

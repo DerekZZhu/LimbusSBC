@@ -161,3 +161,25 @@ h3 {
   /* align-self: flex-end;
   text-align: right; */
 }
+
+.footer {
+  height: 10vh;
+  padding: 1rem;
+  margin-top: 2.5rem;
+}
+
+.footer > p {
+  margin: 0;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.links > * {
+  height: 2rem;
+  width: 2rem;
+  margin-right: 2rem;
+}
